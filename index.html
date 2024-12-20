@@ -3,65 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular KR</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'calculos/styles.css' %}">
+    <title>Página Principal</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Calcular KR</h1>
-        <form method="post">
-            {% csrf_token %}
-            <div class="section">
-                <h2>IPCSL</h2>
-                <div class="input-group">
-                    <label for="percentis_IPCSL">Percentis:</label>
-                    <input type="text" name="percentis_IPCSL" placeholder="Ex: 50,75" required>
-                </div>
-                <div class="input-group">
-                    <label for="valores_IPCSL">Valores:</label>
-                    <input type="text" name="valores_IPCSL" placeholder="Ex: 2.7,5.4" required>
-                </div>
-                <div class="input-group">
-                    <label for="valor_atual_IPCSL">Valor Atual:</label>
-                    <input type="number" step="0.01" name="valor_atual_IPCSL" placeholder="Ex: 3.01" required>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>PAV</h2>
-                <div class="input-group">
-                    <label for="percentis_PAV">Percentis:</label>
-                    <input type="text" name="percentis_PAV" placeholder="Ex: 25,50" required>
-                </div>
-                <div class="input-group">
-                    <label for="valores_PAV">Valores:</label>
-                    <input type="text" name="valores_PAV" placeholder="Ex: 2.8,7.5" required>
-                </div>
-                <div class="input-group">
-                    <label for="valor_atual_PAV">Valor Atual:</label>
-                    <input type="number" step="0.01" name="valor_atual_PAV" placeholder="Ex: 6.99" required>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>ITU</h2>
-                <div class="input-group">
-                    <label for="percentis_ITU">Percentis:</label>
-                    <input type="text" name="percentis_ITU" placeholder="Ex: 25,50" required>
-                </div>
-                <div class="input-group">
-                    <label for="valores_ITU">Valores:</label>
-                    <input type="text" name="valores_ITU" placeholder="Ex: 0.3,1.5" required>
-                </div>
-                <div class="input-group">
-                    <label for="valor_atual_ITU">Valor Atual:</label>
-                    <input type="number" step="0.01" name="valor_atual_ITU" placeholder="Ex: 1.25" required>
-                </div>
-            </div>
-
-            <button type="submit">Calcular</button>
-        </form>
-    </div>
+    <h1>Bem-vindo à Página Principal</h1>
+    <iframe src="calculos/templates/calculos/formulario.html" width="100%" height="600px" style="border:none;"></iframe>
 </body>
 </html>
